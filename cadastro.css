@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Ubuntu:wght@400;500;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+:root{
+  --roxo: #610094;
+  --branco: white;
+  --preto: #000;
+}
+/* navbar  */
+
+
+/* sub menu  */
+
+.navbar ul ul{
+  display: none;
+  position: absolute;
+  transition: all .4s;
+}
+
+.navbar ul li:hover ul{
+  display: block;
+  transition: all .4s;
+}
+
+.navbar ul ul{
+  width: 150px;
+  transition: all .4s;
+}
+
+.navbar ul ul li a{
+  width: 100px;
+  transition: all .4s;
+  margin-top: 5px;
+  /* padding: 5px; */
+  display: block;
+  /* background-color: #313131; */
+}
+
+
+
+/*  navbar   inicio*/
+.navbar{
+    display: flex;
+    /* position: fixed; */
+    background-color: #111;
+    /* display: flex; */
+    width: 100%;
+    /* padding: 30px 0; */
+    height: 100px;
+    font-family: 'Ubuntu', sans-serif;
+    /* z-index: 999; */
+    transition: all 0.3s ease;
+}
+.navbar.sticky{
+    background: var(--roxo);
+    padding: 15px 0;
+    
+}
+.navbar .max-width{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.navbar .logo{
+    color: var(--roxo);
+    font-size: 35px;
+    font-weight: 500;
+}
+.navbar .logo span{
+    color: var(--roxo);
+    transition: all 0.3s ease;
+}
+.navbar.sticky .logo span{
+    color: var(--branco);
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    color: var(--branco);
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+.navbar .menu li a:hover{
+    color: var(--roxo);
+}
+
+.navbar.sticky .menu li a:hover{
+    color: var(--branco);
+}
+
+.menu-btn{
+  color: var(--branquin-nice);
+  font-size: 26px;
+  cursor: pointer;
+  display: none;
+}
+
+
+/* forms  */
+
+.container{
+  /* background-color: yellow; */
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
+
+.container-card{
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  height: 78.5vh;
+}
+
+.singup {
+    color: var(--branco);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    font-weight: bold;
+    font-size: x-large;
+  }
+  
+  .form-card{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+  .card {
+    display: flex;
+    /* background-color: red; */
+    background-color: #111;
+    /* margin: auto; */
+    /* justify-content: center; */
+    align-items: center;
+    min-height: 500px;
+    width: 300px;
+    flex-direction: column;
+    gap: 35px;
+    border-radius: 15px;
+    
+  }
+  .owl-dot.active{
+    width: 35px;
+    border-radius: 15px;
+}
+.owl-dot.active,
+.owl-dot:hover{
+    background: var(--verde-dcria)!important;
+}
+
+  .card a{
+    text-align: center;
+  }
+  
+  .inputBox1 {
+    position: relative;
+    width: 250px;
+    padding: 10px;
+  }
+  
+  .inputBox1 input {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: none;
+    color: var(--branco);
+    font-size: 1em;
+    background: transparent;
+    border-left: 2px solid var(--branco);
+    border-bottom: 2px solid var(--branco);
+    border-top: 2px solid transparent;
+    border-right: 2px solid transparent;
+    transition: 0.1s ease-in-out;
+    border-bottom-left-radius: 8px;
+    letter-spacing: 0.2em;
+  }
+  
+  .inputBox1 span {
+    margin-top: 5px;
+    position: absolute;
+    left: 0;
+    transform: translateY(-4px);
+    margin-left: 10px;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 12px;
+    color: var(--branco);
+    text-transform: uppercase;
+    transition: 0.5s ease-in-out;
+    letter-spacing: 3px;
+    /* border-radius: 8px; */
+  }
+
+  
+  .inputBox1 input:valid~span,
+  .inputBox1 input:focus~span {
+    transform: translateX(156px) translateY(-15px);
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 8px;
+    font-size: 0.8em;
+    padding: 5px 10px;
+    background: var(--roxo);
+    letter-spacing: 0.2em;
+    color: var(--branco);
+    /* border: 2px; */
+  }
+
+  .inputBox1 input:valid,
+  .inputBox1 input:focus {
+    border-left: 2px solid var(--branco);
+    border-bottom: 2px solid var(--branco);
+    border-top: 2px solid var(--branco);
+    border-right: 2px solid var(--branco);
+    transition: 0.1s;
+    color: var(--preto);
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 8px;
+    letter-spacing: 0.2em;
+    background-color: var(--branco);
+  }
+  
+  .link-cadastro{
+    /* background-color: red; */
+    width: 100%;
+
+
+  }
+
+  .link-cadastro span{
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    padding: 5px;
+    text-transform: uppercase;
+    color: white;
+  }
+
+  .link-cadastro span a{
+    color: var(--roxo);    
+    margin-left: 5px;
+  }
+
+  .link-cadastro span a:hover{
+    border-bottom: 2px solid var(--roxo);    
+  }
+  
+
+  .enter {
+    height: 45px;
+    width: 100px;
+    border-radius: 5px;
+    border: 2px solid var(--branco);
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--branco);
+    transition: 0.5s;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 2px;
+    display: flex;
+    /* background-color: blue; */
+    padding: 10px;
+    margin: 40px auto;
+  }
+
+  .login-btn{
+    height: 45px;
+    width: 100px;
+    border-radius: 5px;
+    border: 2px solid var(--branco);
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--branco);
+    transition: 0.5s;
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 2px;
+    display: flex;
+    margin: 10px auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-btn:hover{
+  background-color: var(--roxo);
+}
+
+  .enter:hover {
+    background-color: var(--roxo);
+    color: white;
+  }
+/* listar usuario  */
+
+.lista{
+  background-color: red;
+}
+
+
+/* footer  */
+
+footer{
+  background: #111;
+  padding: 20px 23px;
+  color: var(--branco);
+  text-align: center;
+  margin-top: auto;
+
+}
+footer span a{
+  color: var(--roxo);
+  text-decoration: none;
+}
+footer span a:hover{
+  text-decoration: underline;
+}
+ footer{
+  font-family: 'Roboto', sans-serif;
+}
+
+
+
+
+/* *  responsivo  */
+@media (max-width: 1300px){
+    .navbar .max-width{
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 667px){
+  html,body{
+      min-width: 667px;
+  }
+}
+
+@media (max-width: 991px){
+    .navbar .max-width{
+        padding: 0 50px;
+    }
+}
+@media (max-width: 991px){
+  .navbar .max-width{
+      padding: 0 50px;
+  }
+}
+@media (max-width: 947px){
+  .max-width{
+    max-width: 800px;
+    padding: 0 50px;
+}
+  .menu-btn{
+    display: block;
+    z-index: 999;
+}
+  
+  .navbar .menu{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      left: -100%;
+      top: 0;
+      background: #111;
+      padding-top: 80px;
+      text-align: center;
+      transition: all 0.3s ease;
+  }
+  .navbar .menu.active{
+      left: 0;
+  }
+  .navbar .menu li{
+      display: block;
+  }
+  .navbar .menu li a{
+      display: inline-block;
+      margin: 20px 0;
+      font-size: 25px;
+  }
+}
